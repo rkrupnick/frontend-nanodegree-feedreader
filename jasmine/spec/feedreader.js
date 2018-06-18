@@ -57,28 +57,28 @@ $(function() {
 
         beforeEach(function() {
             body = document.querySelector('body');
-        })
+        });
 
         /* TODO: Write a test that ensures the menu element is
          * hidden by default. You'll have to analyze the HTML and
          * the CSS to determine how we're performing the
          * hiding/showing of the menu element.
          */
-         it('is hidden by default', function() {
+        it('is hidden by default', function() {
             expect(body.classList).toContain('menu-hidden');
-         });
+        });
          /* TODO: Write a test that ensures the menu changes
           * visibility when the menu icon is clicked. This test
           * should have two expectations: does the menu display when
           * clicked and does it hide when clicked again.
           */
-          it('changes visibility when the menu icon is clicked', function() {
+        it('changes visibility when the menu icon is clicked', function() {
             $('.menu-icon-link').click();
             expect(body.classList).not.toContain('menu-hidden');
 
             $('.menu-icon-link').click();
             expect(body.classList).toContain('menu-hidden');
-          });
+        });
     });
     /* TODO: Write a new test suite named "Initial Entries" */
     describe('Initial Entries', function() {
@@ -92,10 +92,10 @@ $(function() {
          * Remember, loadFeed() is asynchronous so this test will require
          * the use of Jasmine's beforeEach and asynchronous done() function.
          */
-         it('loads a single entry into the feed container', function() {
+        it('loads a single entry into the feed container', function() {
             const container = $('.feed');
             expect(container.length).toBe(1);
-         })
+        });
     });
     /* TODO: Write a new test suite named "New Feed Selection" */
     describe('New Feed Selection', function() {
@@ -117,9 +117,9 @@ $(function() {
          * by the loadFeed function that the content actually changes.
          * Remember, loadFeed() is asynchronous.
          */
-         it('changes content when a new feed is loaded', function() {
+        it('changes content when a new feed is loaded', function() {
 
             expect(newFeedList).not.toBe(initialFeedList);
-         });
+        });
     });
 }());
