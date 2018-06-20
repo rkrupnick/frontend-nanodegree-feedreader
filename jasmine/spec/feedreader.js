@@ -87,14 +87,14 @@ $(function() {
     });
 
     describe('New Feed Selection', function() {
-        let initialFeedList,
-            newFeedList;
+        let initialFeed,
+            newFeed;
 
         beforeEach(function(done) {
             loadFeed(0, function() {
-                initialFeedList = $('.feed-list');
+                initialFeed = $('.feed').html();
                 loadFeed(1, function() {
-                    newFeedList = $('.feed-list');
+                    newFeed = $('.feed').html();
                     done();
                 });
             });
@@ -106,7 +106,7 @@ $(function() {
          */
         it('changes content when a new feed is loaded', function() {
 
-            expect(newFeedList).not.toBe(initialFeedList);
+            expect(newFeed).not.toBe(initialFeed);
         });
     });
 }());
