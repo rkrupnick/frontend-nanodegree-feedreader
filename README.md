@@ -1,5 +1,7 @@
 # Feed Reader App
 
+This is project 4 in the Udacity Front End Nanodegree program. The goal was to complete a testing suite with Jasmine.
+
 ## How to Run
 
 1. Download or clone the files onto your computer
